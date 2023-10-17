@@ -26,13 +26,14 @@
   
   .logo {
     display: flex;
+    padding-left: 50px;
     align-items: center;
+    cursor: pointer;
   }
   
-  .logo img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+  .logo button:hover {
+    background-color: #555;
+
   }
   
   .nav-link {

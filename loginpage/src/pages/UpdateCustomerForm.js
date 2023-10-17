@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import '../css/Home.css'
 
 const UpdateCustomerForm = () => {
     const [accountNo, setAccountNo] = useState('');
@@ -15,6 +16,7 @@ const UpdateCustomerForm = () => {
         try {
             const response = await axios.put(`http://localhost:8080/api/customers/update/${accountNo}`, {username, email, addharNo, phone});
             console.log('Customer updated:', response.data);
+            navigate(-1);
 
         } catch (error) {
             console.error('Error updating customer:', error);

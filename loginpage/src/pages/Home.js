@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import {PiBankDuotone} from 'react-icons/pi'
 import '../css/Home.css'
 
 function Home() {
   
-  const [search,setSearch]=useState('');
+  // const [search,setSearch]=useState('');
+  const navigate=useNavigate()
     
   return (
     <div className="home-container">
       <header className="header">
         <div className="logo">
-          <img src="" alt="" />
+        <h1>
+          <PiBankDuotone 
+          role="button"
+          tabIndex="0"
+          onClick={()=>navigate('/')}
+          />
+        </h1>
         </div>
         <div>
         <h1 id='headerName'>NEW BANK</h1>
@@ -29,7 +36,7 @@ function Home() {
         <h2>Welcome to Your Website</h2>
         <p>Discover amazing things here.</p>
 
-        <div className="search-bar">
+        {/* <div className="search-bar">
           <input 
           type="text" 
           id='search'
@@ -39,7 +46,7 @@ function Home() {
           onChange={e=>setSearch(e.target.value)}
           />
           <button>Search</button>
-        </div>
+        </div> */}
 
       </main>
     </div>

@@ -24,7 +24,7 @@ const DepositComponent = () => {
         <div className="form-container">
             <h2>Deposit</h2>
             <input type="text" placeholder="Customer ID" value={accountNo} onChange={(e) => setAccountNo(e.target.value)} />
-            <input type="number" placeholder="Amount" value={customerAmount} onChange={(e) => setCustomerAmount(e.target.value)} />
+            <input type="text" placeholder="Amount" value={customerAmount} onChange={(e) => setCustomerAmount(e.target.value)} />
             <button onClick={handleDeposit}>Deposit</button>
         </div>
     );

@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import '../css/Home.css';
-import { Link} from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import SearchItem from './SearchItem';
 import Content from './Content';
 import axios from 'axios';
-
+import {PiBankDuotone} from 'react-icons/pi'
 
 const UserDashboard = ({Type}) => {
   const [search, setSearch]= useState('');
   const [items, setItems] = useState([]);
-
+  const navigate=useNavigate()
 
   useEffect(() => {
     fetchTodos();
@@ -42,7 +42,13 @@ const UserDashboard = ({Type}) => {
     <div className="home-container">
       <header className="header">
         <div className="logo">
-          <img src="" alt="" />
+        <h1>
+          <PiBankDuotone 
+          role="button"
+          tabIndex="0"
+          onClick={()=>navigate('/')}
+          />
+          </h1>
         </div>
         <div>
         <h1 id='headerName'>USER DASHBOARD</h1>
