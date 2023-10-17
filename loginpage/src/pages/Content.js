@@ -31,8 +31,6 @@ const Content = ({items, handleDelete}) => {
                 <th>dateOfBirth</th>
                 <th>customerAmount</th>
                 <th>Actions</th>
-                <th>withdraw</th>
-                <th>Deposit</th>
                 </tr>
             </thead>
             {(items.length)?(
@@ -46,12 +44,11 @@ const Content = ({items, handleDelete}) => {
                     <td>{item.email}</td>
                     <td>{item.dateOfBirth}</td>
                     <td>{item.customerAmount}</td>
-                        <td>
-                            <Link to='/updatecustomerform'><button>Edit</button></Link>
-                        </td>
-                        <td>
-                            <button onClick={()=>handleDelete(item.id)}>Delete</button>
-                        </td>
+                    <td>
+                        <Link to='/updatecustomerform'><button>Edit</button></Link>
+
+                        <button onClick={()=>handleDelete(item.id)}>Delete</button>
+                    </td>
                     </tr>
                 ))
             }

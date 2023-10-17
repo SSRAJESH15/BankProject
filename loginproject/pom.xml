@@ -40,7 +40,7 @@
         <version>30.1-jre</version>
         </dependency>
         <dependency>
-            <groupId>org.json</groupId>Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+            <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>20230227</version>
         </dependency>
