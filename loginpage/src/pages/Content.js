@@ -46,7 +46,8 @@ const Content = ({items, handleDelete}) => {
                     <td>{item.customerAmount}</td>
                     <td>
                         <Link to='/updatecustomerform'><button>Edit</button></Link>
-
+                    </td>
+                    <td>
                         <button onClick={()=>handleDelete(item.id)}>Delete</button>
                     </td>
                     </tr>
